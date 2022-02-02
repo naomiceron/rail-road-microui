@@ -1,0 +1,12 @@
+#nameOfCar {
+  border-radius: 5px;
+  height: 25px;
+  width: 180px;
+}
+.inputBox {
+  padding: 10px;
+}
+.label {
+  color: #000000;
+  margin: 20px;
+}
