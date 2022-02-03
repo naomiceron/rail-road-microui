@@ -10,7 +10,7 @@ import InputBox from 'remote2/InputBox';
 
 // const css = require("../src/styles/App.css");
 
-// Hola
+// Hola 2
 
 const App = () => (
   <>
