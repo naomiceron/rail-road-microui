@@ -9,7 +9,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
+    "@types/enzyme": "^3.10.11",
     "@types/node": "^16.11.22",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
@@ -25,15 +25,15 @@
     "typescript": "^4.5.5",
     "web-vitals": "^2.1.4",
     "webpack": "^5.68.0",
-    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack --config webpack.prod.js",
     "serve": "serve dist -p 3001",
-    "clean": "rm -rf dist"
-},
+    "clean": "rm -rf dist",
+    "test": "jest --watchAll=false"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -51,5 +51,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "webpack-cli": "^4.9.2"
   }
 }
