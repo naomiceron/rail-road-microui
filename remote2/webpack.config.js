@@ -34,6 +34,9 @@ module.exports = {
         // expose each component
         "./InputBox": "./src/components/InputBox",
       },
+      remotes: {
+        remote1: "remote1@http://localhost:3001/remoteEntry.js"
+      },
       shared: {
         ...deps,
         react: { singleton: true, eager: true, requiredVersion: deps.react },

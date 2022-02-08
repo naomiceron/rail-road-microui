@@ -34,6 +34,8 @@ module.exports = {
         // expose each component
         "./Destinations": "./src/components/Destinations",
         "./Receivers": "./src/components/Receivers",
+        "./ReceiverService": "./src/api/ReceiverService",
+        "./TrainService": "./src/api/TrainService",
       },
       shared: {
         ...deps,

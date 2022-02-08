@@ -1,5 +1,5 @@
 {
-  "name": "remote2",
+  "name": "rail-road-operations",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,9 @@
     "@mui/x-data-grid": "^5.3.0",
     "@mui/x-data-grid-generator": "^5.3.0",
     "@mui/x-data-grid-pro": "^5.3.0",
-    "@types/enzyme": "^3.10.11",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
@@ -18,27 +20,26 @@
     "axios": "^0.25.0",
     "immutability-helper": "^3.1.1",
     "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dnd": "^14.0.5",
+    "react-dnd-html5-backend": "^14.1.0",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.2.1",
+    "react-list-drag-and-drop": "^0.7.0",
+    "react-movable": "^3.0.2",
     "react-scripts": "5.0.0",
     "react-select": "^5.2.2",
     "react-table": "^7.7.0",
-    "style-loader": "^3.3.1",
     "styled-components": "^5.3.3",
     "sweetalert2": "^11.3.10",
     "swr": "^1.2.0",
-    "testing-library": "^0.0.2",
-    "ts-jest": "^27.1.3",
-    "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "webpack serve --open",
-    "build": "webpack --config webpack.prod.js",
-    "serve": "serve dist -p 3002",
-    "clean": "rm -rf dist",
-    "test": "jest --watchAll=false"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -57,15 +58,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/preset-react": "^7.16.7",
-    "@testing-library/dom": "^8.11.3",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
-    "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.2",
-    "webpack-cli": "^4.9.2"
   }
 }
