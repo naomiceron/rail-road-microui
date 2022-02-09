@@ -1,21 +1,19 @@
-import InputBox from "../components/InputBox";
-import userEvent from "@testing-library/user-event";
-import { render, screen } from "@testing-library/react";
+import InputBox from '../components/InputBox';
+import userEvent from '@testing-library/user-event';
+import { render, screen } from '@testing-library/react';
+import regeneratorRuntime from 'regenerator-runtime';
 
 describe('render table structure', () => {
-	jest.mock('remote1/TrainService', 
-		() => { 
-			// some mocking for my remote app routes
-		},
-		{ virtual: true }
-	);
-	it('display table headers', async () => {
-		const { findByText } = renderInputBox();
-		//const nameOfCar = await findByText("Name Of Car");
-    	//expect(nameOfCar).not.toBeUndefined();
-	});
+  const renderComponent = () => render(<InputBox />);
+
+  it('display table headers', async () => {
+    renderComponent();
+    const nameOfCar = await screen.findByText('Name Of Car');
+    //const nameOfCar = await findByText("Name Of Car");
+    expect(nameOfCar).not.toBeUndefined();
+  });
 });
 
 function renderInputBox() {
-	return render(<InputBox />); 
+  return render(<InputBox />);
 }

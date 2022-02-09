@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { List, arrayMove } from "react-movable";
-import { getDestinations } from "../api/TrainService";
-import { updateDestination } from "../api/TrainService";
+import React, { useState, useEffect } from 'react';
+import { List, arrayMove } from 'react-movable';
+import { getDestinations } from '../api/TrainService';
+import { updateDestination } from '../api/TrainService';
 
 const Destinations = () => {
   const [result, setResult] = useState<any>();
@@ -28,14 +28,14 @@ const Destinations = () => {
   return (
     <div
       style={{
-        maxWidth: "300px",
-        margin: "10px ",
-        backgroundColor: "#F7F7F7",
-        padding: "3em",
-        display: "inline-block",
+        maxWidth: '300px',
+        margin: '10px ',
+        backgroundColor: '#F7F7F7',
+        padding: '3em',
+        display: 'inline-block',
       }}
     >
-      {" "}
+      {' '}
       <h3>Destination</h3>
       {!loading ? (
         <List
@@ -47,7 +47,7 @@ const Destinations = () => {
           renderList={({ children, props, isDragged }) => (
             <ul
               {...props}
-              style={{ padding: 0, cursor: isDragged ? "grabbing" : undefined }}
+              style={{ padding: 0, cursor: isDragged ? 'grabbing' : undefined }}
             >
               {children}
             </ul>
@@ -57,16 +57,16 @@ const Destinations = () => {
               {...props}
               style={{
                 ...props.style,
-                padding: "1.5em",
-                margin: "0.5em 0em",
-                listStyleType: "none",
-                cursor: isDragged ? "grabbing" : "grab",
-                border: "2px solid #CCC",
-                boxShadow: "3px 3px #AAA",
-                color: "#333",
-                borderRadius: "5px",
+                padding: '1.5em',
+                margin: '0.5em 0em',
+                listStyleType: 'none',
+                cursor: isDragged ? 'grabbing' : 'grab',
+                border: '2px solid #CCC',
+                boxShadow: '3px 3px #AAA',
+                color: '#333',
+                borderRadius: '5px',
                 fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
-                backgroundColor: isDragged || isSelected ? "#EEE" : "#FFF",
+                backgroundColor: isDragged || isSelected ? '#EEE' : '#FFF',
                 width: 250,
               }}
             >
