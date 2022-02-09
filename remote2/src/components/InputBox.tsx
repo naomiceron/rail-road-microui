@@ -8,8 +8,8 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { getDestinations } from "remote1/TrainService";
-import { getReceivers } from "remote1/ReceiverService";
+import { getDestinations } from "../api/TrainService";
+import { getReceivers } from "../api/ReceiverService";
 import { Button } from "@mui/material";
 import { sort } from "../api/SortService";
 import { Cart } from "../types/CartType";
@@ -142,7 +142,7 @@ const InputBox = () => {
                 <TableCell align="center">Destination</TableCell>
                 <TableCell align="center">Receiver</TableCell>
                 <TableCell>
-                  <Button variant="contained" onClick={handleSort}>
+                  <Button name="sortBtn" variant="contained" onClick={handleSort}>
                     Sort
                   </Button>
                 </TableCell>

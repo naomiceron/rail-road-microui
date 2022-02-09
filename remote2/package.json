@@ -59,6 +59,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-react": "^7.16.7",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/react": "^12.1.2",
@@ -67,5 +69,21 @@
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "webpack-cli": "^4.9.2"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
